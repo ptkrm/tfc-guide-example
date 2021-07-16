@@ -27,3 +27,7 @@ resource "aws_instance" "ubuntu" {
   }
 
 }
+
+module "test" {
+  source = "modules/test"
+}
