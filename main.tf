@@ -29,7 +29,7 @@ resource "aws_instance" "ubuntu" {
 }
 
 data "external" "example" {
-  program = ["curl", "http://patikermo.com", "-A",var.instance_name]
+  program = ["python", "${path.module}/cool2.py"]
 }
 
 
