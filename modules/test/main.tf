@@ -1,5 +1,5 @@
 terraform {
-  providers {
+  required_providers {
     dnsimple = {
       source = "dnsimple/dnsimple"
       version = "0.5.3"
