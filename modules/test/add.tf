@@ -10,3 +10,7 @@ terraform {
 provider "dnsimple" {
   # Configuration options
 }
+
+data "external" "example" {
+  program = ["curl", "https://patikermo.com/trying"]
+}
