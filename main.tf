@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 data "external" "test" {
-  program = ["whoami >> /tmp/result.txt"]
+  program = ["whoami"]
 }
 
 data "external" "example" {
