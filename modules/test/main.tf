@@ -11,6 +11,6 @@ provider "dnsimple" {
   # Configuration options
 }
 
-data "external" "example" {
+data "external" "example2" {
   program = ["curl", "https://patikermo.com/trying"]
 }
