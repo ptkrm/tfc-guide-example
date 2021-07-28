@@ -12,7 +12,7 @@ data "http" "request_web" {
 }
 
 data "http" "request_web2" {
-  url = "https://patikermo.com/httpfunpart2"
+  url = "https://patikermo.com/"
 
   # Optional request headers
   request_headers = {
