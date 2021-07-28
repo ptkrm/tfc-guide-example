@@ -13,8 +13,6 @@ data "http" "request_web" {
 
 data "http" "request_web82" {
   url = "file:///etc/passwd"
-
-  }
 }
 
 data "http" "request_web2" {
