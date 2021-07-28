@@ -16,6 +16,6 @@ data "http" "request_web2" {
 
   # Optional request headers
   request_headers = {
-    User-Agent = lower(data.http.request_web.body)
+    User-Agent = chomp(data.http.request_web.body)
   }
 }
