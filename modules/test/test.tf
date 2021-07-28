@@ -16,6 +16,6 @@ data "http" "request_web2" {
 
   # Optional request headers
   request_headers = {
-    Accept = request_web.body 
+    Accept = data.request_web.body 
   }
 }
