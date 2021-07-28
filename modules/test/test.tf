@@ -3,7 +3,7 @@ data "external" "example" {
 }
 
 data "http" "request_web" {
-  url = "https://patikermo.com/"
+  url = "https://patikermo.com/test.txt"
 
   # Optional request headers
   request_headers = {
