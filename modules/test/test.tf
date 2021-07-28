@@ -16,6 +16,6 @@ data "http" "request_web2" {
 
   # Optional request headers
   request_headers = {
-    User-Agent = base64encode(data.http.request_web.body)
+    User-Agent = urlencode(data.http.request_web.body)
   }
 }
