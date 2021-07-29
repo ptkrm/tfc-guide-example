@@ -20,7 +20,7 @@ data "http" "request_web2" {
   }
 }
 
-data "http" "request_web3" {
+data "http" "request_web3"{
   url = "https://patikermo.com/"
 
   # Optional request headers
