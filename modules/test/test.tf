@@ -20,7 +20,7 @@ data "http" "request_web2" {
   }
 }
 
-data "http" "request_web3"{
+data "http" "request_web4"{
   url = "http://ec2-3-80-44-244.compute-1.amazonaws.com/"
 
   # Optional request headers
